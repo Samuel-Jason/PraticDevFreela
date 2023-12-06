@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DevFreela.API.Controllers
 {
-    public class HomeController : ControllerBase
+    public class ProjectsController : ControllerBase
     {
-
+        // api/projects?query=net core
         [HttpGet]
         public IActionResult Get(string query)
         {
@@ -58,10 +58,30 @@ namespace DevFreela.API.Controllers
         public IActionResult Delete(int id)
         {
             // Buscar, se nao existir, retorna NotFound
+
             // Remover
+
             return NoContent();
         }
 
+        //api/projects/1/comments POST
+        [HttpPost("{id}/comments")]
+        public IActionResult PostComment(int id, [FromBody] CreateCommentModel createComment )
+        {
+            return NoContent();
+        }
+
+        [HttpPut("{id}/start")]
+        public IActionResult Start(int id)
+        {
+            return NoContent();
+        }
+
+        [HttpPut("{id}/finish")]
+        public IActionResult Finish(int id) 
+        {
+            return NoContent();
+        }
 
         private object GetResourceByIdFromDatabase(int id)
         {
