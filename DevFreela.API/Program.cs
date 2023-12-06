@@ -8,6 +8,7 @@ namespace DevFreela.API
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.Configure<OpeningTimeOption>(builder.Configuration.GetSection("OpeningTime"));
 
             var app = builder.Build();
 

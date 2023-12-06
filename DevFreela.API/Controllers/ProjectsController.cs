@@ -1,11 +1,18 @@
 ﻿using DevFreela.API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace DevFreela.API.Controllers
 {
     public class ProjectsController : ControllerBase
     {
+        private readonly OpeningTimeOption _option;
+        public ProjectsController(IOptions<OpeningTimeOption> option)
+        {
+            _option = option.Value;
+        }
+
         // api/projects?query=net core
         [HttpGet]
         public IActionResult Get(string query)
@@ -71,6 +78,13 @@ namespace DevFreela.API.Controllers
             return NoContent();
         }
 
+        [HttpPut("{id}/login")]
+        public IActionResult Login(int id, [FromBody] LoginModel loginModel)
+        {
+            return NoContent();
+        }
+
+
         [HttpPut("{id}/start")]
         public IActionResult Start(int id)
         {
@@ -83,10 +97,10 @@ namespace DevFreela.API.Controllers
             return NoContent();
         }
 
-        private object GetResourceByIdFromDatabase(int id)
-        {
-            //Dbcontext.Resources.SingleOfDefault(x => x.Id == id);
-        }
+        //private object GetResourceByIdFromDatabase(int id)
+        //{
+        //    //Dbcontext.Resources.SingleOfDefault(x => x.Id == id);
+        //}
 
     }
 
