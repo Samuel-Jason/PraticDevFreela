@@ -8,7 +8,7 @@ using DevFreela.Application.ViewModels;
 
 namespace DevFreela.Application.Services.Interfaces
 {
-    public class IProjectService
+    public interface IProjectService
     {
         List<ProjectViewModel> GetAll(string query);
         ProjectDetailsViewModel GetById(int id);

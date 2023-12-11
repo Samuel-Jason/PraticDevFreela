@@ -9,6 +9,8 @@ namespace DevFreela.Infrastructure.Persistence
 {
     public class DevFreelaDbContext
     {
+        public readonly object ProjectComments;
+
         public DevFreelaDbContext()
         {
             Projects = new List<Project>
