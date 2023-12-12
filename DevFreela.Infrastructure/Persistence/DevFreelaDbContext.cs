@@ -9,7 +9,8 @@ namespace DevFreela.Infrastructure.Persistence
 {
     public class DevFreelaDbContext
     {
-        public readonly object ProjectComments;
+        //public readonly object ProjectComments;
+        public List<ProjectComment> ProjectComments { get; set; }
 
         public DevFreelaDbContext()
         {

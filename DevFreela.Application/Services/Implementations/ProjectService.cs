@@ -39,7 +39,8 @@ namespace DevFreela.Application.Services.Implementations
 
         public void Finish(int id)
         {
-            throw new NotImplementedException();
+            var project = _dbContext.Projects.SingleOrDefault(x => x.id == id);
+            project.Finish();
         }
 
         public List<ProjectViewModel> GetAll(string query)
@@ -71,12 +72,15 @@ namespace DevFreela.Application.Services.Implementations
 
         public void Start(int id)
         {
-            throw new NotImplementedException();
+            var project = _dbContext.Projects.SingleOrDefault(x => x.id == id);
+            project.Start();
         }
 
         public void Update(UpdateProjectInputModel inputModel)
         {
-            throw new NotImplementedException();
+            var project = _dbContext.Projects.SingleOrDefault(x => x.id == inputModel.Id);
+            //dbproject.SaveChange();
+
         }
     }
 }

@@ -1,0 +1,6 @@
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\bin\Debug\DevFreela.Core.dll
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\bin\Debug\DevFreela.Core.pdb
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\obj\Debug\DevFreela.Core.csproj.AssemblyReference.cache
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\obj\Debug\DevFreela.Core.csproj.CoreCompileInputs.cache
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\obj\Debug\DevFreela.Core.dll
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\obj\Debug\DevFreela.Core.pdb

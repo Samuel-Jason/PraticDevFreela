@@ -1,11 +1,66 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "DevFreela.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DevFreela.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DevFreela.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevFreela.Application.dll": {}
+        }
+      },
+      "DevFreela.Core/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DevFreela.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevFreela.Core.dll": {}
+        }
+      },
+      "DevFreela.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "DevFreela.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DevFreela.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DevFreela.Infrastructure.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "DevFreela.Application/1.0.0": {
+      "type": "project",
+      "path": "../DevFreela.Application/DevFreela.Application.csproj",
+      "msbuildProject": "../DevFreela.Application/DevFreela.Application.csproj"
+    },
+    "DevFreela.Core/1.0.0": {
+      "type": "project",
+      "path": "../DevFreela.Core/DevFreela.Core.csproj",
+      "msbuildProject": "../DevFreela.Core/DevFreela.Core.csproj"
+    },
+    "DevFreela.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../DevFreela.Infrastructure/DevFreela.Infrastructure.csproj",
+      "msbuildProject": "../DevFreela.Infrastructure/DevFreela.Infrastructure.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "DevFreela.Application >= 1.0.0",
+      "DevFreela.Infrastructure >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Jason\\.nuget\\packages\\": {},
@@ -39,7 +94,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Jason\\Desktop\\PROJETOS PARA GITHUB\\DevFreela.API\\DevFreela.Application\\DevFreela.Application.csproj": {
+              "projectPath": "C:\\Users\\Jason\\Desktop\\PROJETOS PARA GITHUB\\DevFreela.API\\DevFreela.Application\\DevFreela.Application.csproj"
+            },
+            "C:\\Users\\Jason\\Desktop\\PROJETOS PARA GITHUB\\DevFreela.API\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Jason\\Desktop\\PROJETOS PARA GITHUB\\DevFreela.API\\DevFreela.Infrastructure\\DevFreela.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
