@@ -28,3 +28,4 @@ C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.API\obj\Debu
 C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.API\obj\Debug\net7.0\DevFreela.API.pdb
 C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.API\obj\Debug\net7.0\DevFreela.API.genruntimeconfig.cache
 C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.API\obj\Debug\net7.0\ref\DevFreela.API.dll
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.API\obj\Debug\net7.0\DevFreela.API.csproj.AssemblyReference.cache

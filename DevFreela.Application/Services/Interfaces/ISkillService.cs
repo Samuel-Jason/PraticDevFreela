@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DevFreela.Application.Services.Interfaces
 {
-    public class ISkillService
+    public interface ISkillService
     {
         List<SkillViewModel> GetAll();
 
