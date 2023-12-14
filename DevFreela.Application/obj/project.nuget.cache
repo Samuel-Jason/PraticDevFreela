@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "xLZfTraL6KrIB5Zi+u7O/KENO02ndm7oHKGVYu6urhawpPm5XExMM3FpKPcgqNWl7Xb305Dwz9KYKVS5lR+lxA==",
+  "dgSpecHash": "/CSf9OGpHFvOcbS2+VKDVw1Bpq6GKItcuV2n8udijx+WThltLVAIccE5pBYNHnoFOnQvaWRLZjBzPAAu9Sszaw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jason\\Desktop\\PROJETOS PARA GITHUB\\DevFreela.API\\DevFreela.Application\\DevFreela.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Jason\\.nuget\\packages\\mediatr\\7.0.0\\mediatr.7.0.0.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.0\\microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",

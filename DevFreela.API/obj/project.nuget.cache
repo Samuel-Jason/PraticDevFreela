@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "2y0IFoYdMwmwjzohnnEfOD5CsUWo8I4gpRNnWnPB7CjGGS+wvq/IoafK9oYaCQfAQTzvOpzmSYfyiN5ckRE7mA==",
+  "dgSpecHash": "h+P9oiz9g0OVGbZeCTm2o0YBXYCdZnQmLhHy5IV6AJ7As1udZWSZBtCeJ8YlH0MarnqqzEuiRC9Pr9z9BbWsSA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jason\\Desktop\\PROJETOS PARA GITHUB\\DevFreela.API\\DevFreela.API\\DevFreela.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jason\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Jason\\.nuget\\packages\\mediatr\\7.0.0\\mediatr.7.0.0.nupkg.sha512",
+    "C:\\Users\\Jason\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\7.0.0\\mediatr.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

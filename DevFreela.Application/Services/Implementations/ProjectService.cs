@@ -5,6 +5,7 @@ using DevFreela.Core.Entities;
 using DevFreela.Infrastructure.Persistence;
 using System.Linq;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace DevFreela.Application.Services.Implementations
 {
@@ -67,7 +68,10 @@ namespace DevFreela.Application.Services.Implementations
 
         public ProjectDetailsViewModel GetById(int id)
         {
-            var project = _dbContext.Projects.SingleOrDefault(x => x.id == id);
+            var project = _dbContext.Projects
+                .Include(x => x.Client)
+                .Include(x => x.Freelancer)
+                .SingleOrDefault(x => x.id == id);
 
             if (project != null)
             {
