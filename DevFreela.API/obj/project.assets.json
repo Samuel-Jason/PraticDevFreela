@@ -46,6 +46,31 @@
           }
         }
       },
+      "FluentValidation/11.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net7.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "FluentValidation.ValidatorAttribute/8.6.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "[8.6.1, 9.0.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.ValidatorAttribute.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.ValidatorAttribute.dll": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1160,6 +1185,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "DevFreela.Infrastructure": "1.0.0",
+          "FluentValidation.ValidatorAttribute": "8.6.1",
           "MediatR": "7.0.0"
         },
         "compile": {
@@ -1183,6 +1209,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "DevFreela.Core": "1.0.0",
+          "FluentValidation.ValidatorAttribute": "8.6.1",
           "Microsoft.EntityFrameworkCore": "7.0.0"
         },
         "compile": {
@@ -1231,6 +1258,43 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "FluentValidation/11.8.1": {
+      "sha512": "N72rnlE99XYB7EGA1u9y7m7kNTTynqOPBhZqDE8zr1Y0aSR4t5si94LRA7UVdAV09GaXWCErW+EiFhfbg3DSbg==",
+      "type": "package",
+      "path": "fluentvalidation/11.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.8.1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "FluentValidation.ValidatorAttribute/8.6.1": {
+      "sha512": "OJOMPvZIeSD/X6TBNFSRhn5j/kvsBIuyn9k7coSgUoaillH4QXJn+LyPp8T9aSbZt3r+VIvzhkg782QeaHNnAQ==",
+      "type": "package",
+      "path": "fluentvalidation.validatorattribute/8.6.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidation.validatorattribute.8.6.1.nupkg.sha512",
+        "fluentvalidation.validatorattribute.nuspec",
+        "lib/net45/FluentValidation.ValidatorAttribute.dll",
+        "lib/netstandard1.1/FluentValidation.ValidatorAttribute.dll",
+        "lib/netstandard2.0/FluentValidation.ValidatorAttribute.dll"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -3557,6 +3621,8 @@
     "net7.0": [
       "DevFreela.Application >= 1.0.0",
       "DevFreela.Infrastructure >= 1.0.0",
+      "FluentValidation >= 11.8.1",
+      "FluentValidation.ValidatorAttribute >= 8.6.1",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 7.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
@@ -3616,6 +3682,14 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.8.1, )"
+          },
+          "FluentValidation.ValidatorAttribute": {
+            "target": "Package",
+            "version": "[8.6.1, )"
+          },
           "MediatR.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
             "version": "[7.0.0, )"
@@ -3663,5 +3737,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Versão detectada do pacote fora da restrição de dependência: FluentValidation.ValidatorAttribute 8.6.1 requer FluentValidation (>= 8.6.1 && < 9.0.0), mas a versão FluentValidation 11.8.1 foi resolvida.",
+      "libraryId": "FluentValidation",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

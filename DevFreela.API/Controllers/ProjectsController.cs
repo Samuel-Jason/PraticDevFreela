@@ -1,8 +1,12 @@
 ﻿using DevFreela.API.Models;
+using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.InputModels;
 using DevFreela.Application.Services.Interfaces;
+using DevFreela.Core.Entities;
+using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
 namespace DevFreela.API.Controllers
@@ -10,10 +14,12 @@ namespace DevFreela.API.Controllers
     public class ProjectsController : ControllerBase
     {
         private readonly IProjectService _projectService;
+        private readonly IMediator _mediator;
 
-        public ProjectsController(IProjectService projectService)
+        public ProjectsController(IProjectService projectService, IMediator mediator)
         {
             _projectService = projectService;
+            _mediator = mediator;
         }
 
         // api/projects?query=net core
@@ -35,21 +41,28 @@ namespace DevFreela.API.Controllers
             {
                 return Ok(resource);
             }
-           
+
             return NotFound();
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] NewProjectInputModel inputModel)
+        public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
         {
-            if (inputModel.Title.Length > 50)
+            if (!ModelState.IsValid)
             {
-                return BadRequest();
+                var message = ModelState
+                    .SelectMany(ms => ms.Value.Errors)
+                    .Select(e => e.ErrorMessage);
+                return BadRequest(message);.
+                //return BadRequest();
             }
 
-            var id = _projectService.Create(inputModel);
-
-            return CreatedAtAction(nameof(GetById), new { id = id }, inputModel);
+            //if (command.Title.Length > 50)
+            //{
+            //    return BadRequest();
+            //}
+            //var id = await _mediator.Send();
+            //return CreatedAtAction(nameof(GetById), new { id = id }, command);
         }
 
         //api/projects/2

@@ -4,3 +4,8 @@ C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\obj\Deb
 C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\obj\Debug\DevFreela.Core.csproj.CoreCompileInputs.cache
 C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\obj\Debug\DevFreela.Core.dll
 C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\obj\Debug\DevFreela.Core.pdb
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\bin\Debug\FluentValidation.dll
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\bin\Debug\FluentValidation.ValidatorAttribute.dll
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\bin\Debug\FluentValidation.xml
+C:\Users\Jason\Desktop\PROJETOS PARA GITHUB\DevFreela.API\DevFreela.Core\obj\Debug\DevFreela.Core.csproj.CopyComplete

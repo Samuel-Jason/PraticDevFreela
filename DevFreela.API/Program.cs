@@ -1,3 +1,4 @@
+using DevFreela.API.Validators;
 using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.Services.Implementations;
 using DevFreela.Application.Services.Interfaces;
@@ -18,6 +19,8 @@ namespace DevFreela.API
             builder.Services.AddSingleton<DevFreelaDbContext>();
             builder.Services.AddScoped<IProjectService, ProjectService>();
             builder.Services.AddMediatR(typeof(CreateProjectCommand));
+            builder.Services.AddControllers()
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
 
 
             var app = builder.Build();

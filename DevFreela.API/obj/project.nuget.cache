@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "h+P9oiz9g0OVGbZeCTm2o0YBXYCdZnQmLhHy5IV6AJ7As1udZWSZBtCeJ8YlH0MarnqqzEuiRC9Pr9z9BbWsSA==",
+  "dgSpecHash": "3ALJcKfHVzvnOTx39owESwvVMTm4wXEaVDAl6ogDitI+Jsra5FKjuewWMDF9Wpy9yZgmP53AmdFnFrK+ciQzDQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jason\\Desktop\\PROJETOS PARA GITHUB\\DevFreela.API\\DevFreela.API\\DevFreela.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jason\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Jason\\.nuget\\packages\\fluentvalidation\\11.8.1\\fluentvalidation.11.8.1.nupkg.sha512",
+    "C:\\Users\\Jason\\.nuget\\packages\\fluentvalidation.validatorattribute\\8.6.1\\fluentvalidation.validatorattribute.8.6.1.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\mediatr\\7.0.0\\mediatr.7.0.0.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\7.0.0\\mediatr.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
@@ -74,5 +76,16 @@
     "C:\\Users\\Jason\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Jason\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Versão detectada do pacote fora da restrição de dependência: FluentValidation.ValidatorAttribute 8.6.1 requer FluentValidation (>= 8.6.1 && < 9.0.0), mas a versão FluentValidation 11.8.1 foi resolvida.",
+      "libraryId": "FluentValidation",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }
