@@ -52,17 +52,15 @@ namespace DevFreela.API.Controllers
             {
                 var message = ModelState
                     .SelectMany(ms => ms.Value.Errors)
-                    .Select(e => e.ErrorMessage);
-                return BadRequest(message);.
+                    .Select(e => e.ErrorMessage)
+                    .ToList();
+
+                return BadRequest(message);
                 //return BadRequest();
             }
 
-            //if (command.Title.Length > 50)
-            //{
-            //    return BadRequest();
-            //}
-            //var id = await _mediator.Send();
-            //return CreatedAtAction(nameof(GetById), new { id = id }, command);
+            var id = await _mediator.Send(command);
+            return CreatedAtAction(nameof(GetById), new { id = id }, command);
         }
 
         //api/projects/2

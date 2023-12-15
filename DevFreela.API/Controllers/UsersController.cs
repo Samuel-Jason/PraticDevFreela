@@ -13,7 +13,7 @@ namespace DevFreela.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] CreateUserModel createUserModel)
+        public IActionResult Post([FromBody] CreateUserCommandModel createUserModel)
         {
             return CreatedAtAction(nameof(GetById), new {id = 1}, createUserModel);
         }

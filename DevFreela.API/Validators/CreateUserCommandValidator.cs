@@ -1,14 +1,15 @@
-﻿using FluentValidation;
+﻿using DevFreela.API.Models;
+using FluentValidation;
 
 namespace DevFreela.API.Validators
 {
-    public class CreateUserCommandValidator : AbstractValidator<CreateUserCommandValidator>
+    public class CreateUserCommandValidator : AbstractValidator<CreateUserCommandModel>
     {
         public CreateUserCommandValidator(object password, object email)
         {
             RuleFor(p => p.Email)
                 .EmailAddress()
-                .WithMessage("");
+                .WithMessage("Email incorreto");
 
             RuleFor(p => p.Password)
                 .Must(ValidPassword)
@@ -24,10 +25,5 @@ namespace DevFreela.API.Validators
         {
             throw new NotImplementedException();
         }
-
-        public string Password { get; private set; }
-        public string Email { get; private set; }
-        public string FullName { get; private set; }
-
     }
 }
