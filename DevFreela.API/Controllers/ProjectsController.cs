@@ -1,4 +1,5 @@
-﻿using DevFreela.API.Models;
+﻿using DevFreela.API.Filters;
+using DevFreela.API.Models;
 using DevFreela.Application.Commands.CreateProject;
 using DevFreela.Application.InputModels;
 using DevFreela.Application.Services.Interfaces;
@@ -25,24 +26,16 @@ namespace DevFreela.API.Controllers
 
         //api/projects/1/comments POST
         [HttpPost("{id}/comments")]
+        [TypeFilter(typeof(ValidationFilter))]
         public IActionResult PostComment(int id, [FromBody] CreateCommentInputModel InputModel)
         {
-            if (!ModelState.IsValid)
-            {
-                var message = ModelState
-                    .SelectMany(ms => ms.Value.Errors)
-                    .Select(e => e.ErrorMessage)
-                    .ToList();
-
-                return BadRequest();
-            }
-
             _projectService.CreateComment(InputModel);
 
             return CreatedAtAction(nameof(GetById), new { id = id }, InputModel);
         }
 
         [HttpPost]
+        [TypeFilter(typeof(ValidationFilter))]
         public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
         {
             var id = await _mediator.Send(command);
@@ -52,25 +45,17 @@ namespace DevFreela.API.Controllers
 
         //api/projects/2
         [HttpPut("{id}")]
+        [TypeFilter(typeof(ValidationFilter))]
         public IActionResult Put(int id, [FromBody] UpdateProjectInputModel InputModel)
         {
-            if (!ModelState.IsValid)
-            {
-                var message = ModelState
-                    .SelectMany(ms => ms.Value.Errors)
-                    .Select(e => e.ErrorMessage)
-                    .ToList();
-
-                return BadRequest(message);
-            }
             _projectService.Update(InputModel);
 
             return CreatedAtAction(nameof(GetById), new { id = id }, InputModel);
         }
 
-
         // api/projects?query=net core
         [HttpGet]
+        [TypeFilter(typeof(ValidationFilter))]
         public IActionResult Get(string query)
         {
             var projetos = _projectService.GetAll(query);
@@ -80,6 +65,7 @@ namespace DevFreela.API.Controllers
 
         //api/projects/3 DELETE
         [HttpDelete("id")]
+        [TypeFilter(typeof(ValidationFilter))]
         public IActionResult Delete(int id)
         {
             _projectService.Delete(id);
