@@ -38,22 +38,13 @@ namespace DevFreela.API.Controllers
             }
 
             _projectService.CreateComment(InputModel);
+
             return CreatedAtAction(nameof(GetById), new { id = id }, InputModel);
         }
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateProjectCommand command)
         {
-            if (!ModelState.IsValid)
-            {
-                var message = ModelState
-                    .SelectMany(ms => ms.Value.Errors)
-                    .Select(e => e.ErrorMessage)
-                    .ToList();
-
-                return BadRequest(message);
-            }
-
             var id = await _mediator.Send(command);
 
             return CreatedAtAction(nameof(GetById), new { id = id }, command);
@@ -126,6 +117,7 @@ namespace DevFreela.API.Controllers
         public IActionResult Finish(int id)
         {
             _projectService.Finish(id);
+
             return NoContent();
         }
     }

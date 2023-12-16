@@ -6,17 +6,40 @@ namespace DevFreela.API.Controllers
     [Route("api/users")]
     public class UsersController : ControllerBase
     {
-        [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        private readonly object _mediator;
+
+        public UsersController(object mediator)
         {
-            return Ok();
+            _mediator = mediator;
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(int id)
+        {
+            var query = new GetUserQuery(id);
+            
+            var user = await _mediator.Send(query);
+
+            return Ok(user);
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] CreateUserCommandModel createUserModel)
+        public async Task<IActionResult> Post([FromBody] CreateUserCommandModel command)
         {
-            return CreatedAtAction(nameof(GetById), new {id = 1}, createUserModel);
+            var id = await _mediator.Send(command);
+
+            return  CreatedAtAction(nameof(GetById), new {id = id}, command);
         }
 
+    }
+
+    internal class GetUserQuery
+    {
+        private int id;
+
+        public GetUserQuery(int id)
+        {
+            this.id = id;
+        }
     }
 }
