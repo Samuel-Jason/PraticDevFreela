@@ -5,7 +5,7 @@ namespace DevFreela.API.Validators
 {
     public class CreateUserCommandValidator : AbstractValidator<CreateUserCommandModel>
     {
-        public CreateUserCommandValidator(object password, object email)
+        public CreateUserCommandValidator()
         {
             RuleFor(p => p.Email)
                 .EmailAddress()
