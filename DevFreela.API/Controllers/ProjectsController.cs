@@ -83,7 +83,7 @@ namespace DevFreela.API.Controllers
                 return Ok(resource);
             }
 
-            return NotFound();
+            return NotFound($"Projeto com ID {id} não encontrado.");
         }
 
         [HttpPut("{id}/login")]
