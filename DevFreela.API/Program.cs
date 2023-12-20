@@ -20,8 +20,8 @@ namespace DevFreela.API
             builder.Services.AddSingleton<DevFreelaDbContext>();
             builder.Services.AddScoped<IProjectService, ProjectService>();
             builder.Services.AddMediatR(typeof(CreateProjectCommand));
-            builder.Services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)))
-                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
+            builder.Services.AddControllers(options => options.Filters.Add(typeof(ValidationFilter)));
+             //   .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateUserCommandValidator>());
 
 
             var app = builder.Build();
